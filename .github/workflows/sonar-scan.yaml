@@ -29,12 +29,12 @@ jobs:
 
       # Will post to the remote site @ sonarcloud.io  
       - name: Build and analyze
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
         run: |
           cd $GRADLE_DIR
           chmod +x ./gradlew
           ./gradlew build sonarqube --info 
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} 
           GRADLE_DIR: 'source' # Modify this to wherever './gradlew' is 
+          
