@@ -53,6 +53,7 @@ project(":desktop") {
     apply plugin: "java-library"
 
     // Enforce use of JDK 17. Will download if it isn't in default OS location.
+	// Check why it isn't downloading JDK.
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
@@ -73,6 +74,7 @@ project(":core") {
     apply plugin: "java-library"
 
     // Enforce use of JDK 17. Will download if it isn't in default OS location.
+	// Check why it isn't downloading JDK.
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
