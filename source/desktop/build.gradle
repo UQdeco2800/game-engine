@@ -25,6 +25,12 @@ task debug(dependsOn: classes, type: JavaExec) {
     workingDir = project.assetsDir
     ignoreExitValue = true
     debug = true
+    debugOptions {
+        enabled = true
+        port = 5005     // Port 5005 is the default port on which the IntelliJ debugger listens.
+        server = true
+        suspend = false
+    }
 }
 
 task dist(type: Jar) {
