@@ -50,6 +50,11 @@ public class ForestGameArea extends GameArea {
 
   private Entity player;
 
+  /**
+   * Initialise this ForestGameArea to use the provided TerrainFactory.
+   * @param terrainFactory TerrainFactory used to create the terrain for the GameArea.
+   * @requires terrainFactory != null
+   */
   public ForestGameArea(TerrainFactory terrainFactory) {
     super();
     this.terrainFactory = terrainFactory;

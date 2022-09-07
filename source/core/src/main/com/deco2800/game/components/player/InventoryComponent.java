@@ -42,11 +42,7 @@ public class InventoryComponent extends Component {
    * @param gold gold
    */
   public void setGold(int gold) {
-    if (gold >= 0) {
-      this.gold = gold;
-    } else {
-      this.gold = 0;
-    }
+    this.gold = Math.max(gold, 0);
     logger.debug("Setting gold to {}", this.gold);
   }
 

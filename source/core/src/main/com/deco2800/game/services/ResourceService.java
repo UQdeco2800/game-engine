@@ -22,12 +22,17 @@ public class ResourceService implements Disposable {
     this(new AssetManager());
   }
 
+  /**
+   * Initialise this ResourceService to use the provided AssetManager.
+   * @param assetManager AssetManager to use in this service.
+   * @requires assetManager != null
+   */
   public ResourceService(AssetManager assetManager) {
     this.assetManager = assetManager;
   }
 
   /**
-   * Load an asset from a file
+   * Load an asset from a file.
    * @param filename Asset path
    * @param type     Class to load into
    * @param <T>      Type of class to load into
